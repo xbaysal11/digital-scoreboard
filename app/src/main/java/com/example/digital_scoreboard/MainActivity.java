@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private TextView redScore , blueScore, redFall, blueFall;
-    private Button redPlus, bluePlus, blueFallBtn, redFallBtn, clearBtn;
+    private Button redPlus, bluePlus, blueFallBtn, redFallBtn, clearBtn, redMinus, blueMinus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         redPlus = findViewById(R.id.redPlus);
         bluePlus = findViewById(R.id.bluePlus);
+        redMinus = findViewById(R.id.redMinus);
+        blueMinus = findViewById(R.id.blueMinus);
         clearBtn = findViewById(R.id.clearBtn);
         redFallBtn = findViewById(R.id.redFallBtn);
         blueFallBtn = findViewById(R.id.blueFallBtn);
@@ -52,16 +54,52 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 redFallNum = redFallNum +1;
-                redFall.setText(String.valueOf(redFallNum));
+                if (redFallNum >= 6){
+                    redFallNum = 5;
+                }else{
+                    redFall.setText(String.valueOf(redFallNum));
+                }
+
             }
         });
         blueFallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 blueFallNum = blueFallNum +1;
-                blueFall.setText(String.valueOf(blueFallNum));
+                if (blueFallNum >= 6){
+                    blueFallNum = 5;
+                }else{
+                    blueFall.setText(String.valueOf(blueFallNum));
+
+                }
             }
         });
+        redMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redScoreNum = redScoreNum -1;
+                if (redScoreNum < 0){
+                    redScoreNum = 0;
+                }else{
+                    redScore.setText(String.valueOf(redScoreNum));
+                }
+            }
+        });
+        blueMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                blueScoreNum = blueScoreNum -1;
+                if (blueScoreNum < 0){
+                    blueScoreNum = 0;
+                }else{
+                    blueScore.setText(String.valueOf(blueScoreNum));
+                }
+            }
+        });
+
+
+
+
         clearBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -13,14 +13,14 @@
         android:layout_marginTop="32dp"
         android:background="#5FFFD600"
         android:gravity="center"
+        android:text="0"
         android:textColor="#000000"
         android:textSize="86sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/blueFall"
         app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toEndOf="@+id/redScore"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        android:text="0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/redScore"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:background="#7FFF0000"
+        android:background="#8AFF0000"
         android:gravity="center"
         android:text="0"
         android:textColor="#000000"
@@ -70,28 +70,43 @@
         tools:text="0" />
 
     <Button
-        android:id="@+id/redPlus"
-        android:layout_width="218dp"
-        android:layout_height="57dp"
+        android:id="@+id/redMinus"
+        android:layout_width="104dp"
+        android:layout_height="54dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
         android:background="#76D50000"
-        android:text="+"
+        android:text="-"
         android:textColor="#000000"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/redScore"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.792" />
+
+    <Button
+        android:id="@+id/blueMinus"
+        android:layout_width="104dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="#850091EA"
+        android:text="-"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueScore"
+        app:layout_constraintVertical_bias="0.792" />
 
     <Button
         android:id="@+id/clearBtn"
         android:layout_width="218dp"
         android:layout_height="57dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="40dp"
         android:background="#9664DD17"
         android:text="Clear"
@@ -99,26 +114,43 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bluePlus"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toEndOf="@+id/redPlus"
         app:layout_constraintTop_toBottomOf="@+id/redScore"
         app:layout_constraintVertical_bias="0.529" />
 
     <Button
         android:id="@+id/bluePlus"
-        android:layout_width="218dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="40dp"
-        android:background="#910091EA"
+        android:layout_width="104dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#880091EA"
         android:text="+"
         android:textColor="#000000"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
-        app:layout_constraintStart_toEndOf="@+id/clearBtn"
+        app:layout_constraintEnd_toStartOf="@+id/blueMinus"
         app:layout_constraintTop_toBottomOf="@+id/blueScore"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.792" />
+
+    <Button
+        android:id="@+id/redPlus"
+        android:layout_width="104dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="#76D50000"
+        android:text="+"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/redMinus"
+        app:layout_constraintTop_toBottomOf="@+id/redScore"
+        app:layout_constraintVertical_bias="0.792" />
 
     <Button
         android:id="@+id/redFallBtn"
